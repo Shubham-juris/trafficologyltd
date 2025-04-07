@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export default function Footer() {
+function Footer() {
   const [isHoursOpen, setIsHoursOpen] = useState(false);
 
   return (
@@ -76,3 +76,4 @@ export default function Footer() {
     </>
   );
 }
+export default Footer;
