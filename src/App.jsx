@@ -12,8 +12,8 @@ export default function App() {
   return (
     <>
       <HeroSection/>
-      <Subscribe/>
       <Footer/>
+      <Subscribe/>
     </>
   );
 }
