@@ -2,7 +2,8 @@ import React from "react";
 
 function Contact() {
   return (
-    <section className="bg-emerald-50 py-16 px-4 sm:px-6 lg:px-8">
+    <section  id="contact"
+    className="bg-emerald-50 py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-3xl mx-auto">
         <div className="text-center mb-10">
           <h2 className="text-3xl font-bold text-emerald-800">Get in Touch</h2>

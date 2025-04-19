@@ -29,7 +29,7 @@ export default function Service() {
     setActiveIndex(index === activeIndex ? null : index);
 
   return (
-    <section className="py-16 px-4 md:px-12 bg-white text-green-800" id="services">
+    <section id='service' className="py-16 px-4 md:px-12 bg-white text-green-800" >
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
         {/* Left - Text */}
         <div>
