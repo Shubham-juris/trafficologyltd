@@ -3,7 +3,11 @@ import { motion } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 import { FaTrafficLight } from 'react-icons/fa'; // icon import
 
-const navItems = ['Home', 'Service', 'Contact'];
+const navItems = [
+  { name: 'Home', link: '/' },
+  { name: 'Service', link: '#service' },
+  { name: 'Contact', link: '#contact' },
+];
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -28,14 +32,14 @@ export default function Navbar() {
           <div className="hidden md:flex space-x-6">
             {navItems.map((item, index) => (
               <motion.a
-                key={item}
-                href={`#${item.toLowerCase().replace(' ', '-')}`}
+                key={item.name}
+                href={item.link}
                 className="text-green-700 hover:text-green-500 font-medium transition"
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 * index }}
               >
-                {item}
+                {item.name}
               </motion.a>
             ))}
           </div>
@@ -54,17 +58,17 @@ export default function Navbar() {
         <motion.div
           className="md:hidden px-4 pt-4 pb-4 bg-white border-t border-gray-100 space-y-2"
           initial={{ height: 0, opacity: 0 }}
-          animate={{ height: "auto", opacity: 1 }}
+          animate={{ height: 'auto', opacity: 1 }}
           transition={{ duration: 0.3 }}
         >
           {navItems.map((item) => (
-            <a
-              key={item}
-              href={`#${item.toLowerCase().replace(' ', '-')}`}
+            <a // Changed Link to a
+              key={item.name}
+              href={item.link}
               className="block text-green-700 hover:text-green-500 font-medium"
               onClick={() => setIsOpen(false)}
             >
-              {item}
+              {item.name}
             </a>
           ))}
         </motion.div>
