@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
-import { FaTrafficLight } from 'react-icons/fa'; // icon import
+
+// Import the logo image
+import logo from '../../assets/Images/logo.png'; // Replace './your-logo.png' with the actual path to your image
 
 const navItems = [
   { name: 'Home', link: '/' },
@@ -17,14 +19,14 @@ export default function Navbar() {
     <nav className="fixed top-0 left-0 w-full bg-white shadow-md z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
-          {/* Logo + Icon */}
+          {/* Logo */}
           <motion.div
-            className="flex items-center space-x-2 text-green-600 text-2xl font-bold"
+            className="flex items-center text-green-600 text-2xl font-bold"
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <FaTrafficLight className="text-green-600" />
+            <img src={logo} alt="Trafficology Logo" className="h-8 w-auto mr-2" /> {/* Adjust h-8 as needed */}
             <span>Trafficology</span>
           </motion.div>
 
@@ -62,7 +64,7 @@ export default function Navbar() {
           transition={{ duration: 0.3 }}
         >
           {navItems.map((item) => (
-            <a // Changed Link to a
+            <a
               key={item.name}
               href={item.link}
               className="block text-green-700 hover:text-green-500 font-medium"
