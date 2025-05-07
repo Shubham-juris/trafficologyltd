@@ -71,7 +71,19 @@ function Footer() {
           </div>
         </div>
       </section>
-
+<div className="mt-12">
+  <iframe
+    title="Trafficology Location"
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2481.1399013771914!2d-115.14628492370366!3d53.21767647994337!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x539f8828c4f0489f%3A0xa9d83ee3bcb011e!2s5211%2050%20St%2C%20Drayton%20Valley%2C%20AB%20T7A%201C9%2C%20Canada!5e0!3m2!1sen!2sca!4v1715100000000"
+    width="100%"
+    height="300"
+    style={{ border: 0 }}
+    allowFullScreen=""
+    loading="lazy"
+    referrerPolicy="no-referrer-when-downgrade"
+    className="rounded-lg shadow-md"
+  />
+</div>
       {/* Footer Bottom */}
       <footer className="bg-emerald-100 border-t border-emerald-300 py-6 text-center text-sm text-emerald-700">
         <p className="mb-3">© 2025 Trafficology. All rights reserved.</p>
